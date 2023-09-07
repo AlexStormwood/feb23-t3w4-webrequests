@@ -33,7 +33,7 @@ function getRandomPokemon(){
 		console.log(error);
 	});
 
-	// console.log("Result of API request is:" + result);
+	console.log("Result of API request is:" + result);
 
 	// let somePromise = new Promise(resolve, reject => {
 
