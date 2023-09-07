@@ -7,7 +7,13 @@ function getRandomPokemon(){
 	// let ID = 25;
 	// let result = fetch("https://pokeapi.co/api/v2/pokemon/" + ID).then()
 
-	let ID = 25;
+	// Safer than ceil because it handles 0 better 
+	let ID = Math.floor(Math.random() * 1010) + 1;
+
+	// Math.round = rounds nearest up or down 
+	// Math.floor = rounds down 
+	// Math.ceil = rounds up
+
 	let result = fetch(API_BASE_URL + ID).then((response) => {
 		console.log("Response is: " + JSON.stringify(response, null, 4));
 
